@@ -1,4 +1,4 @@
-const target = window.document.getElementsByTagName('h1')[0]
+const target = window.document.getElementById("title-game");
 
 const flickerLetter = letter => `<span style="animation: text-flicker-in-glow ${Math.random()*4}s linear both "> ${letter} </span>`
 const colorLetter = letter => `<span style="color: hsla(${Math.random()*360}, 80%, 80%, 5);"> ${letter} </span>`;

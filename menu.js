@@ -1,8 +1,22 @@
-let gameNewButton = document.getElementById("btnNew"); // START BUTTON GAME
-let gameTest = document.getElementById("gameroom"); //TODO: CANVAS OR DOM ?? = GAME DISPLAY
-let gameExitButton = document.getElementById("btnExit"); // EXIT BUTTON GAME 
-let gameDebug = document.getElementById("debug"); // LOG DEBUG ON GAME DISPLAY
-let menuTitle = window.document.getElementsByTagName('h1')[0] // TITLE GAME IN MENU
+const gameNewButton = document.getElementById("btnNew"); // START BUTTON GAME
+const gameTest = document.getElementById("gameroom"); //TODO: CANVAS OR DOM ?? = GAME DISPLAY
+const gameExitButton = document.getElementById("btnExit"); // EXIT BUTTON GAME 
+const gameDebug = document.getElementById("debug"); // LOG DEBUG ON GAME DISPLAY
+const menuTitle = document.getElementsByTagName('h1')[0] // TITLE GAME IN MENU
+const scoreGame = document.getElementById("scoreBoard"); // SCORE
+let counter = 0;
+
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
+
+
 
 
 gameNewButton.addEventListener('click', function(event) {
@@ -13,6 +27,7 @@ gameNewButton.addEventListener('click', function(event) {
     gameExitButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
     // LOOP START GAME
+    sleep(10);
     gameTest.style.backgroundColor = "green"; //Test STARTGAME
     gameDebug.innerText = "Debug: RUNNING GAME <% //TODO: delete this %>";
 });
@@ -22,7 +37,9 @@ gameExitButton.addEventListener('click', function(event) {
     // Hide Element
     gameExitButton.style.visibility = "hidden";
     gameNewButton.style.visibility = "hidden";
+    menuTitle.style.visibility = "hidden";
     // GAME BREAK
+    sleep(10);
     gameTest.style.backgroundColor = "red"; //Test EXIT GAME
     gameDebug.innerText = "Debug: EXIT GAME <% //TODO: delete this %>"
 
@@ -38,7 +55,7 @@ gameTest.addEventListener('dblclick', function(event) {
     gameNewButton.style.visibility = "visible";
     menuTitle.style.visibility = "visible";
     // OUT LOOP CONDITION = PLAYER LOSING
-    gameNewButton.innerText = "RESTART";
+    sleep(10);
     gameDebug.innerText = "Debug: LOSING GAME <% //TODO: delete this %>"
 
 });
