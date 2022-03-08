@@ -5,6 +5,7 @@ const gameCreditButton = document.getElementById("btnCredit"); // EXIT BUTTON GA
 const gameDebug = document.getElementById("debug"); // LOG DEBUG ON GAME DISPLAY
 const menuTitle = document.getElementsByTagName('h1')[0] // TITLE GAME IN MENU
 const scoreGame = document.getElementById("scoreBoard"); // SCORE
+const tutoControl = document.getElementById("tuto");
 const credits = document.getElementById("credit");
 const paraCredit = document.createElement("p");
 
@@ -22,6 +23,7 @@ newGameButton.addEventListener('click', function(event) {
     event.preventDefault;
     // Hide Element 
     gameTest.style.backgroundImage = "none";
+    tutoControl.style.visibility = "hidden";
     newGameButton.style.visibility = "hidden";
     gameCreditButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
@@ -40,6 +42,7 @@ gameCreditButton.addEventListener('click', function(event) {
     gameCreditButton.style.visibility = "hidden";
     newGameButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
+    tutoControl.style.visibility = "hidden";
     // Visible
     paraCredit.style.visibility = "visible";
     // GAME BREAK
@@ -63,6 +66,7 @@ gameTest.addEventListener('dblclick', function(event) {
     menuTitle.style.visibility = "visible";
     paraCredit.style.visibility = "hidden";
     scoreGame.style.visibility = "visible";
+    tutoControl.style.visibility = "hidden";
     // OUT LOOP CONDITION = PLAYER LOSING
     sleep(10);
     gameDebug.innerText = "Debug: LOSING GAME <% //TODO: delete this %>"
