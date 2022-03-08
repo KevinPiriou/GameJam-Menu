@@ -17,6 +17,11 @@
         justify-content: center;
     }
     
+    #credit {
+        display: flex;
+        justify-content: center;
+    }
+    
     .btn-group {
         display: flex;
         justify-content: center;
@@ -44,7 +49,7 @@
         animation: blinking_borderNew 1.5s infinite;
     }
     
-    #btnExit {
+    #btnCredit {
         background: none;
         border-radius: 30px;
         padding: 1.2em 5em;
