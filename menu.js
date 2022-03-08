@@ -1,5 +1,5 @@
 //// INIT CONST
-const gameNewButton = document.getElementById("btnNew"); // START BUTTON GAME
+const newGameButton = document.getElementById("btnNew"); // START BUTTON GAME
 const gameTest = document.getElementById("gameroom"); //TODO: CANVAS OR DOM ?? = GAME DISPLAY
 const gameCreditButton = document.getElementById("btnCredit"); // EXIT BUTTON GAME 
 const gameDebug = document.getElementById("debug"); // LOG DEBUG ON GAME DISPLAY
@@ -18,11 +18,11 @@ function sleep(milliseconds) {
 }
 //// DOM
 /////// DOM START GAME
-gameNewButton.addEventListener('click', function(event) {
+newGameButton.addEventListener('click', function(event) {
     event.preventDefault;
     // Hide Element 
     gameTest.style.backgroundImage = "none";
-    gameNewButton.style.visibility = "hidden";
+    newGameButton.style.visibility = "hidden";
     gameCreditButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
     paraCredit.style.visibility = "hidden";
@@ -38,7 +38,7 @@ gameCreditButton.addEventListener('click', function(event) {
     event.preventDefault;
     // Hide Element
     gameCreditButton.style.visibility = "hidden";
-    gameNewButton.style.visibility = "hidden";
+    newGameButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
     // Visible
     paraCredit.style.visibility = "visible";
@@ -59,7 +59,7 @@ gameTest.addEventListener('dblclick', function(event) {
     gameTest.style.background = "rgb(16, 24, 32)";
     gameTest.style.backgroundColor = "linear-gradient(0deg, rgba(16,24,32,1) 0%, rgba(33,37,41,1) 100%);"; //Test LOSE CONDITION GAME
     gameCreditButton.style.visibility = "visible";
-    gameNewButton.style.visibility = "visible";
+    newGameButton.style.visibility = "visible";
     menuTitle.style.visibility = "visible";
     paraCredit.style.visibility = "hidden";
     scoreGame.style.visibility = "visible";

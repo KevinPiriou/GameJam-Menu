@@ -5,9 +5,14 @@ const colorLetter = letter => `<span style="color: hsla(${Math.random()*360}, 80
 const flickerAndColorText = text =>
     text
     .split('')
-    .map(flickerLetter)
+    .join('')
+    .split('-')
     .map(colorLetter)
-    .join('');
+    .map(flickerLetter)
+    .join('')
+    .split(',');
+
+
 const neonGlory = target => target.innerHTML = flickerAndColorText(target.textContent);
 
 
