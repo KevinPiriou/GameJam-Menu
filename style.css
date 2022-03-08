@@ -1,0 +1,375 @@
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    @import url('https://fonts.googleapis.com/css?family=Monoton');
+    html,
+    body {
+        background-color: black;
+        font-family: 'Monoton', cursive;
+    }
+    
+    h1 {
+        font-weight: 400;
+        font-size: 128px;
+        text-align: center;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+    }
+    
+    #title-game {
+        display: flex;
+        justify-content: center;
+        margin-top: 75px;
+        font-size: 50px;
+        font-family: 'Roboto';
+        font-style: bold;
+        color: rgba(0, 170, 170, 0.5);
+    }
+    
+    #btnNew {
+        background: none;
+        border-radius: 30px;
+        padding: 1.2em 5em;
+        letter-spacing: 0.35em;
+        font-size: 0.7em;
+        transition: background-color 0.1s, box-shadow 0.8s, color 0.8s;
+        margin: 1em;
+        animation: blinking_borderNew 1.5s infinite;
+    }
+    
+    #btnExit {
+        background: none;
+        border-radius: 30px;
+        padding: 1.2em 5em;
+        letter-spacing: 0.35em;
+        font-size: 0.7em;
+        transition: background-color 0.1s, box-shadow 0.8s, color 0.8s;
+        margin: 1em;
+        animation: blinking_borderExit 1.5s infinite;
+    }
+    
+    .blinking {
+        animation: blinking_border 1.5s infinite;
+    }
+    
+    .blue {
+        box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+        border: #0dd solid 2px;
+    }
+    
+    .blue:hover {
+        background-color: #0dd;
+        box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
+        animation: none;
+        font-size: .72em;
+    }
+    
+    @keyframes blinking_borderNew {
+        0% {
+            color: rgb(110, 233, 38);
+        }
+        49% {
+            color: transparent;
+        }
+        50% {
+            color: transparent;
+        }
+        99% {
+            color: transparent;
+        }
+        100% {
+            color: white;
+        }
+    }
+    
+    @keyframes blinking_borderExit {
+        0% {
+            color: rgb(233, 67, 38);
+        }
+        49% {
+            color: transparent;
+        }
+        50% {
+            color: transparent;
+        }
+        99% {
+            color: transparent;
+        }
+        100% {
+            color: white;
+        }
+    }
+    
+    #gameroom {
+        width: 100vh;
+        height: 800px;
+        border: solid;
+        border-color: pink;
+        background: rgb(16, 24, 32);
+        background: linear-gradient(0deg, rgba(16, 24, 32, 1) 0%, rgba(33, 37, 41, 1) 100%);
+    }
+    
+    #debug {
+        color: white;
+        display: inline-flex;
+        align-content: center;
+    }
+    
+    @-webkit-keyframes text-flicker-in-glow {
+        0% {
+            opacity: 0
+        }
+        10% {
+            opacity: 0;
+            text-shadow: none
+        }
+        10.1% {
+            opacity: 1;
+            text-shadow: none
+        }
+        10.2% {
+            opacity: 0;
+            text-shadow: none
+        }
+        20% {
+            opacity: 0;
+            text-shadow: none
+        }
+        20.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .25)
+        }
+        20.6% {
+            opacity: 0;
+            text-shadow: none
+        }
+        30% {
+            opacity: 0;
+            text-shadow: none
+        }
+        30.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 20px rgba(255, 255, 255, .25)
+        }
+        30.5% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 20px rgba(255, 255, 255, .25)
+        }
+        30.6% {
+            opacity: 0;
+            text-shadow: none
+        }
+        45% {
+            opacity: 0;
+            text-shadow: none
+        }
+        45.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 20px rgba(255, 255, 255, .25)
+        }
+        50% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 20px rgba(255, 255, 255, .25)
+        }
+        55% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 20px rgba(255, 255, 255, .25)
+        }
+        55.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        57% {
+            opacity: 0;
+            text-shadow: none
+        }
+        57.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 20px rgba(255, 255, 255, .35)
+        }
+        60% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 20px rgba(255, 255, 255, .35)
+        }
+        60.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        65% {
+            opacity: 0;
+            text-shadow: none
+        }
+        65.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 20px rgba(255, 255, 255, .35), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        75% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 20px rgba(255, 255, 255, .35), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        75.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        77% {
+            opacity: 0;
+            text-shadow: none
+        }
+        77.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 20px rgba(255, 255, 255, .4), 0 0 110px rgba(255, 255, 255, .2), 0 0 80px rgba(255, 255, 255, .1)
+        }
+        85% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 20px rgba(255, 255, 255, .4), 0 0 110px rgba(255, 255, 255, .2), 0 0 80px rgba(255, 255, 255, .1)
+        }
+        85.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        86% {
+            opacity: 0;
+            text-shadow: none
+        }
+        86.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .6), 0 0 20px rgba(255, 255, 255, .45), 0 0 110px rgba(255, 255, 255, .25), 0 0 80px rgba(255, 255, 255, .1)
+        }
+        100% {
+            opacity: 1;
+            text-shadow: 0 0 10px rgba(255, 255, 255, .1), 0 0 10px rgba(255, 255, 255, .45), 0 0 10px rgba(255, 255, 255, .1), 0 0 80px rgba(255, 255, 255, .1)
+        }
+    }
+    
+    @keyframes text-flicker-in-glow {
+        0% {
+            opacity: 0
+        }
+        10% {
+            opacity: 0;
+            text-shadow: none
+        }
+        10.1% {
+            opacity: 1;
+            text-shadow: none
+        }
+        10.2% {
+            opacity: 0;
+            text-shadow: none
+        }
+        20% {
+            opacity: 0;
+            text-shadow: none
+        }
+        20.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .25)
+        }
+        20.6% {
+            opacity: 0;
+            text-shadow: none
+        }
+        30% {
+            opacity: 0;
+            text-shadow: none
+        }
+        30.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 60px rgba(255, 255, 255, .25)
+        }
+        30.5% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 60px rgba(255, 255, 255, .25)
+        }
+        30.6% {
+            opacity: 0;
+            text-shadow: none
+        }
+        45% {
+            opacity: 0;
+            text-shadow: none
+        }
+        45.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 60px rgba(255, 255, 255, .25)
+        }
+        50% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 60px rgba(255, 255, 255, .25)
+        }
+        55% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .45), 0 0 60px rgba(255, 255, 255, .25)
+        }
+        55.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        57% {
+            opacity: 0;
+            text-shadow: none
+        }
+        57.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 60px rgba(255, 255, 255, .35)
+        }
+        60% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 60px rgba(255, 255, 255, .35)
+        }
+        60.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        65% {
+            opacity: 0;
+            text-shadow: none
+        }
+        65.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 60px rgba(255, 255, 255, .35), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        75% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 60px rgba(255, 255, 255, .35), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        75.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        77% {
+            opacity: 0;
+            text-shadow: none
+        }
+        77.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 60px rgba(255, 255, 255, .4), 0 0 110px rgba(255, 255, 255, .2), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        85% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .55), 0 0 60px rgba(255, 255, 255, .4), 0 0 110px rgba(255, 255, 255, .2), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        85.1% {
+            opacity: 0;
+            text-shadow: none
+        }
+        86% {
+            opacity: 0;
+            text-shadow: none
+        }
+        86.1% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .6), 0 0 60px rgba(255, 255, 255, .45), 0 0 110px rgba(255, 255, 255, .25), 0 0 100px rgba(255, 255, 255, .1)
+        }
+        100% {
+            opacity: 1;
+            text-shadow: 0 0 30px rgba(255, 255, 255, .6), 0 0 10px rgba(255, 255, 255, .45), 0 0 10px rgba(255, 255, 255, .25), 0 0 10px rgba(255, 255, 255, .1)
+        }
+    }
