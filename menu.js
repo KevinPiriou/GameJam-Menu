@@ -4,8 +4,6 @@ const gameExitButton = document.getElementById("btnExit"); // EXIT BUTTON GAME
 const gameDebug = document.getElementById("debug"); // LOG DEBUG ON GAME DISPLAY
 const menuTitle = document.getElementsByTagName('h1')[0] // TITLE GAME IN MENU
 const scoreGame = document.getElementById("scoreBoard"); // SCORE
-let counter = 0;
-
 
 function sleep(milliseconds) {
     const date = Date.now();
@@ -28,6 +26,7 @@ gameNewButton.addEventListener('click', function(event) {
     menuTitle.style.visibility = "hidden";
     // LOOP START GAME
     sleep(10);
+    gameTest.style.borderRadius = "0%";
     gameTest.style.backgroundColor = "green"; //Test STARTGAME
     gameDebug.innerText = "Debug: RUNNING GAME <% //TODO: delete this %>";
 });
@@ -48,7 +47,8 @@ gameExitButton.addEventListener('click', function(event) {
 
 gameTest.addEventListener('dblclick', function(event) {
     event.preventDefault;
-    // Replace Element 
+    // Replace Element
+    gameTest.style.borderRadius = "90%";
     gameTest.style.background = "rgb(16, 24, 32)";
     gameTest.style.backgroundColor = "linear-gradient(0deg, rgba(16,24,32,1) 0%, rgba(33,37,41,1) 100%);"; //Test LOSE CONDITION GAME
     gameExitButton.style.visibility = "visible";
