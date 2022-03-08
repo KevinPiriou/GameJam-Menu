@@ -51,7 +51,6 @@
         padding: 50px;
         color: white;
         border: solid;
-        border-style: dotted;
         border-radius: 100%;
         border-color: #d982ff;
     }
@@ -159,7 +158,7 @@
         width: 100vh;
         height: 900px;
         border: solid;
-        border-radius: 90%;
+        border-radius: 50%;
         border-color: pink;
         background: rgb(16, 24, 32);
         background: linear-gradient(0deg, rgba(16, 24, 32, 1) 0%, rgba(33, 37, 41, 1) 100%);
