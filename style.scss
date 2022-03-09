@@ -39,6 +39,29 @@ h1 {
     font-family: 'Monoton', cursive;
 }
 
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-gradient-animation {
+    background-image: linear-gradient( to right, cyan, pink);
+    background-size: 1000vw 100vh;
+    animation: anim-grad 5s infinite alternate;
+}
+
+@keyframes anim-grad {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
 #tuto {
     display: flex;
     justify-content: center;
@@ -97,7 +120,7 @@ h1 {
     font-size: 0.7em;
     transition: background-color 1s, box-shadow 1s, color 1s;
     margin: 1em;
-    animation: blinking_borderNew 1s infinite;
+    animation: blinking_borderExit 1s infinite;
 }
 
 #btnCredit {
@@ -127,24 +150,6 @@ h1 {
     font-size: .72em;
 }
 
-@keyframes blinking_borderNew {
-    0% {
-        color: rgb(125, 255, 255));
-    } //
-    49% {
-        color: transparent;
-    } //
-    50% {
-        color: transparent;
-    } //
-    99% {
-        color: transparent;
-    }
-    100% {
-        color: rgb(233, 67, 38);
-    }
-}
-
 @keyframes blinking_borderExit {
     0% {
         color: rgb(255, 125, 147);
@@ -159,7 +164,7 @@ h1 {
         color: transparent;
     }
     100% {
-        color: rgb(38, 221, 78);
+        color: rgb(125, 255, 255);
     }
 }
 
