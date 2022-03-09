@@ -34,8 +34,6 @@ body {
 
 h1 {
     font-weight: 500;
-    font-size: 1080px;
-    text-align: center;
     font-family: 'Monoton', cursive;
 }
 
@@ -48,9 +46,9 @@ h1 {
 }
 
 .share-gradient-animation {
-    background-image: linear-gradient( to right, cyan, pink, pink, cyan, pink, pink, cyan, pink, cyan);
+    background-image: linear-gradient( 45deg, cyan, pink, pink, cyan, pink, pink, cyan, pink, cyan);
     background-size: 1000vw 100vh;
-    animation: anim-grad 6.5s infinite alternate;
+    animation: anim-grad 10s infinite alternate;
 }
 
 @keyframes anim-grad {
