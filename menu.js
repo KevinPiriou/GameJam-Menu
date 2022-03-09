@@ -72,13 +72,14 @@ gameTest.addEventListener('dblclick', function(event) {
     // Replace Element
     gameMusic.pause();
     losingEffect.play();
-    gameTest.style.background = "rgb(16, 24, 32)";
+    gameTest.style.backgroundImage = `url("http://image.noelshack.com/fichiers/2022/10/3/1646826142-fondmenugame.jpg")`;
     gameTest.style.backgroundColor = "linear-gradient(0deg, rgba(16,24,32,1) 0%, rgba(33,37,41,1) 100%);"; //Test LOSE CONDITION GAME
     gameCreditButton.style.visibility = "visible";
     newGameButton.style.visibility = "visible";
     menuTitle.style.visibility = "visible";
     paraCredit.style.visibility = "hidden";
-    //scoreGame.style.visibility = "visible";
+    scoreGame.style.visibility = "visible";
+    scoreGame.innerText = "TU AS PERDU, T'ES MAUVAIS !" + " TON SCORE:";
     tutoControl.style.visibility = "hidden";
     // OUT LOOP CONDITION = GAME OVER
     sleep(10);
