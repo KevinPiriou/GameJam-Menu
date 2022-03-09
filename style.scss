@@ -48,9 +48,9 @@ h1 {
 }
 
 .share-gradient-animation {
-    background-image: linear-gradient( to right, cyan, pink);
+    background-image: linear-gradient( to right, cyan, pink, pink, cyan, pink, pink, cyan, pink, cyan);
     background-size: 1000vw 100vh;
-    animation: anim-grad 5s infinite alternate;
+    animation: anim-grad 6.5s infinite alternate;
 }
 
 @keyframes anim-grad {
