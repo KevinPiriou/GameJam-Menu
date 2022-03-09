@@ -8,8 +8,14 @@ const scoreGame = document.getElementById("scoreBoard"); // SCORE
 const tutoControl = document.getElementById("tuto");
 const credits = document.getElementById("credit");
 const paraCredit = document.createElement("p");
+const losingEffect = new Audio("http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/explosion_02.wav");
+//const menuMusic = new Audio("http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/win.ogg");
+const gameMusic = new Audio("http://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3");
+const effectMenu = new Audio("http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/player_shoot.wav");
+
 
 //// FUNCTION
+//////// FUNCTION SLEEP
 function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
@@ -17,6 +23,8 @@ function sleep(milliseconds) {
         currentDate = Date.now();
     } while (currentDate - date < milliseconds);
 }
+
+
 //// DOM
 /////// DOM START GAME
 newGameButton.addEventListener('click', function(event) {
@@ -29,11 +37,15 @@ newGameButton.addEventListener('click', function(event) {
     menuTitle.style.visibility = "hidden";
     paraCredit.style.visibility = "hidden";
     scoreGame.style.visibility = "hidden";
+    effectMenu.play();
     // LOOP START GAME
-    sleep(10);
+    sleep(100);
+    gameMusic.play();
     gameTest.style.borderRadius = "0%";
-    gameTest.style.backgroundColor = "green"; //Test STARTGAME
-    gameDebug.innerText = "Debug: RUNNING GAME <% //TODO: delete this %>";
+    //gameTest.style.backgroundColor = "green"; //Test STARTGAME
+    //scoreGame.style.visibility = "visible";
+    //scoreGame.innerText = 'Score:' + Math.round(game.time.now);
+    gameDebug.innerText = "Debug: RUNNING GAME || TODO: add game in gameroom %>";
 });
 /////// DOM CREDIT
 gameCreditButton.addEventListener('click', function(event) {
@@ -48,7 +60,7 @@ gameCreditButton.addEventListener('click', function(event) {
     // GAME BREAK
     sleep(10);
     gameTest.style.backgroundColor = "rgb(16, 24, 32)"; //CREDIT
-    gameDebug.innerText = "Debug: CREDIT  <% //TODO: delete this %>";
+    gameDebug.innerText = "Debug: CREDIT || TODO: add real credit + animation %>";
     paraCredit.style.fontFamily = "Roboto";
     paraCredit.innerText = "Merci d'avoir joué à ce magnifique jeu créer par Jordan et Kevin";
     credits.appendChild(paraCredit);
@@ -58,16 +70,17 @@ gameCreditButton.addEventListener('click', function(event) {
 gameTest.addEventListener('dblclick', function(event) {
     event.preventDefault;
     // Replace Element
-    gameTest.style.borderRadius = "90%";
+    gameMusic.pause();
+    losingEffect.play();
     gameTest.style.background = "rgb(16, 24, 32)";
     gameTest.style.backgroundColor = "linear-gradient(0deg, rgba(16,24,32,1) 0%, rgba(33,37,41,1) 100%);"; //Test LOSE CONDITION GAME
     gameCreditButton.style.visibility = "visible";
     newGameButton.style.visibility = "visible";
     menuTitle.style.visibility = "visible";
     paraCredit.style.visibility = "hidden";
-    scoreGame.style.visibility = "visible";
+    //scoreGame.style.visibility = "visible";
     tutoControl.style.visibility = "hidden";
-    // OUT LOOP CONDITION = PLAYER LOSING
+    // OUT LOOP CONDITION = GAME OVER
     sleep(10);
-    gameDebug.innerText = "Debug: LOSING GAME <% //TODO: delete this %>"
+    gameDebug.innerText = "Debug: GAME OVER || TODO: add score of player and restart // new game %>"
 });

@@ -1,5 +1,20 @@
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     @import url('https://fonts.googleapis.com/css?family=Monoton');
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+    /* Portrait */
+    
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+    /* Landscape */
+    
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+    /* ----------- Google Pixel ----------- */
+    /* Portrait */
+    
+    @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {}
+    /* Landscape */
+    
+    @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {}
+    
     html,
     body {
         background: radial-gradient(circle at center, #422e38 0, #031424 150%);
@@ -13,10 +28,6 @@
         font-family: 'Monoton', cursive;
     }
     
-    body {
-        height: 100vh;
-    }
-    
     #tuto {
         display: flex;
         justify-content: center;
@@ -28,9 +39,6 @@
         margin-top: 80px;
         padding: 50px;
         color: white;
-        border: solid;
-        border-radius: 100%;
-        border-color: #d982ff;
     }
     
     .container {
@@ -133,10 +141,9 @@
     }
     
     #gameroom {
-        width: 100vh;
+        width: 1500px;
         height: 900px;
         border: solid;
-        border-radius: 50%;
         border-color: pink;
         background: rgb(16, 24, 32);
         background: linear-gradient(0deg, rgba(16, 24, 32, 1) 0%, rgba(33, 37, 41, 1) 100%);
