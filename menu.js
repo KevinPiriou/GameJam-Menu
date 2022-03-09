@@ -41,11 +41,11 @@ newGameButton.addEventListener('click', function(event) {
     // LOOP START GAME
     sleep(100);
     gameMusic.play();
-    gameTest.style.borderRadius = "0%";
     //gameTest.style.backgroundColor = "green"; //Test STARTGAME
     //scoreGame.style.visibility = "visible";
     //scoreGame.innerText = 'Score:' + Math.round(game.time.now);
     gameDebug.innerText = "Debug: RUNNING GAME || TODO: add game in gameroom %>";
+
 });
 /////// DOM CREDIT
 gameCreditButton.addEventListener('click', function(event) {
@@ -55,6 +55,7 @@ gameCreditButton.addEventListener('click', function(event) {
     newGameButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
     tutoControl.style.visibility = "hidden";
+    scoreGame.style.visibility = "hidden";
     // Visible
     paraCredit.style.visibility = "visible";
     // GAME BREAK
@@ -62,6 +63,7 @@ gameCreditButton.addEventListener('click', function(event) {
     gameTest.style.backgroundColor = "rgb(16, 24, 32)"; //CREDIT
     gameDebug.innerText = "Debug: CREDIT || TODO: add real credit + animation %>";
     paraCredit.style.fontFamily = "Roboto";
+    paraCredit.style.color = "white";
     paraCredit.innerText = "Merci d'avoir joué à ce magnifique jeu créer par Jordan et Kevin";
     credits.appendChild(paraCredit);
 

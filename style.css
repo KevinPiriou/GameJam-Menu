@@ -52,6 +52,18 @@ h1 {
     color: white;
 }
 
+.gradient-border {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border: solid;
+    border-bottom-color: rgb(125, 255, 255);
+    border-top-color: rgb(125, 255, 255);
+    border-left-color: rgb(255, 125, 147);
+    border-right-color: rgb(255, 125, 147);
+    animation: spin .8s linear 0s infinite;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -78,29 +90,29 @@ h1 {
 }
 
 #btnNew {
-    background: none;
+    background-color: rgb(50, 75, 75);
     border-radius: 30px;
     padding: 1.2em 5em;
     letter-spacing: 0.35em;
     font-size: 0.7em;
-    transition: background-color 0.1s, box-shadow 0.8s, color 0.8s;
+    transition: background-color 1s, box-shadow 1s, color 1s;
     margin: 1em;
-    animation: blinking_borderNew 1.5s infinite;
+    animation: blinking_borderNew 1s infinite;
 }
 
 #btnCredit {
-    background: none;
+    background-color: rgb(50, 75, 75);
     border-radius: 30px;
     padding: 1.2em 5em;
     letter-spacing: 0.35em;
     font-size: 0.7em;
-    transition: background-color 0.1s, box-shadow 0.8s, color 0.8s;
+    transition: background-color 1s, box-shadow 1s, color 1s;
     margin: 1em;
-    animation: blinking_borderExit 1.5s infinite;
+    animation: blinking_borderExit 1s infinite;
 }
 
 .blinking {
-    animation: blinking_border 1.5s infinite;
+    animation: blinking_border 10s infinite;
 }
 
 .blue {
@@ -117,32 +129,32 @@ h1 {
 
 @keyframes blinking_borderNew {
     0% {
-        color: rgb(110, 233, 38);
-    }
+        color: rgb(125, 255, 255));
+    } //
     49% {
         color: transparent;
-    }
+    } //
     50% {
         color: transparent;
-    }
+    } //
     99% {
         color: transparent;
     }
     100% {
-        color: rgb(185, 19, 19);
+        color: rgb(233, 67, 38);
     }
 }
 
 @keyframes blinking_borderExit {
     0% {
-        color: rgb(233, 67, 38);
-    }
+        color: rgb(255, 125, 147);
+    } //
     49% {
         color: transparent;
-    }
+    } //
     50% {
         color: transparent;
-    }
+    } //
     99% {
         color: transparent;
     }
@@ -154,8 +166,6 @@ h1 {
 #gameroom {
     width: 1500px;
     height: 900px;
-    border: solid;
-    border-color: pink;
     background: rgb(16, 24, 32);
     background-image: url("http://image.noelshack.com/fichiers/2022/10/3/1646826142-fondmenugame.jpg");
     background-size: cover;
