@@ -23,7 +23,26 @@ function sleep(milliseconds) {
         currentDate = Date.now();
     } while (currentDate - date < milliseconds);
 }
-
+//////// FUNCTION SCORE
+function scoringGame(scoreGame) {
+    let startGame = new Date().getTime(),
+        score = '1';
+    let interval = window.setInterval(function() {
+        let time = new Date().getTime() - startGame;
+        score = Math.floor(time / 10);
+        if (score === 1500) {
+            window.clearInterval(interval);
+            if (!alert("C'est malaisant pour toi on sait !\nSi tu veux rejouer appuyes sur OK")) {
+                window.location.reload();
+            }
+        }
+        scoreGame.innerHTML = score += ` Points`;
+        if (score === 1000) {
+            scoreGame.disabled = true;
+            return scoreGame + "a";
+        }
+    })
+}
 
 //// DOM
 /////// DOM START GAME
@@ -41,17 +60,18 @@ newGameButton.addEventListener('click', function(event) {
     // LOOP START GAME
     sleep(100);
     gameMusic.play();
+    scoringGame(scoreGame, true);
     //gameTest.style.backgroundColor = "green"; //Test STARTGAME
-    //scoreGame.style.visibility = "visible";
+    scoreGame.style.visibility = "visible";
     //scoreGame.innerText = 'Score:' + Math.round(game.time.now);
     gameDebug.innerText = "Debug: RUNNING GAME || TODO: add game in gameroom %>";
 
 });
-/////// DOM CREDIT
+/////// DOM MUTATORS
 gameCreditButton.addEventListener('click', function(event) {
     event.preventDefault;
     // Hide Element
-    gameCreditButton.style.visibility = "hidden";
+    gameCreditButton.style.visibility = "visible";
     newGameButton.style.visibility = "hidden";
     menuTitle.style.visibility = "hidden";
     tutoControl.style.visibility = "hidden";
@@ -60,6 +80,7 @@ gameCreditButton.addEventListener('click', function(event) {
     paraCredit.style.visibility = "visible";
     // GAME BREAK
     sleep(10);
+    gameCreditButton.innerHTML = "RETOUR";
     gameTest.style.backgroundColor = "rgb(16, 24, 32)"; //CREDIT
     gameDebug.innerText = "Debug: CREDIT || TODO: add real credit + animation %>";
     paraCredit.style.fontFamily = "Roboto";
@@ -81,7 +102,7 @@ gameTest.addEventListener('dblclick', function(event) {
     menuTitle.style.visibility = "visible";
     paraCredit.style.visibility = "hidden";
     scoreGame.style.visibility = "visible";
-    scoreGame.innerText = "TU AS PERDU, T'ES MAUVAIS !" + " TON SCORE:";
+    scoreGame.innerText = "TU AS PERDU, T'ES MAUVAIS !" + ` TON SCORE: ${scoreGame}`;
     tutoControl.style.visibility = "hidden";
     // OUT LOOP CONDITION = GAME OVER
     sleep(10);

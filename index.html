@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.5, minimum-scale=1">
     <Link rel="Stylesheet" type="text/css" href="style.scss">
     <script src='https://kit.fontawesome.com/87a79565e0.js' crossorigin='anonymous'></script>
 
@@ -10,6 +10,7 @@
 
 <body>
     <div class="container share-gradient-animation">
+
         <div id="gameroom" class="gradient-border">
             <p id="debug">Debug: Initialisation || TODO: add effect tuto + border %>
             </p>
@@ -20,19 +21,23 @@
             <div id="credit"></div>
             <div id="scoreBoard"></div>
             <div id="tuto">
-                <p> | GET <i class='fas fa-atom' style="font-size:24px;color:hsl(305, 100%, 61%)"></i> FOR SCORING |</p>
-                <p> | DODGE ENEMIES WITH CONTROLS <i class='fas fa-arrow-circle-left' style="font-size:24px;color:cyan"></i> <i class='fas fa-arrow-circle-right' style="font-size:24px;color:cyan"></i> |</p>
-                <p> | GIVE YOUR BEST <i class='fas fa-hand-spock' style='font-size:24px;color:yellow'></i>|</p>
+                <p> | GET <i class='fas fa-atom' style="font-size:24px;color:rgb(255, 125, 147);"></i> FOR SCORING |</p>
+                <p> | DODGE ENEMIES WITH CONTROLS
+                    <i class='fas fa-arrow-circle-left' style="font-size:24px;color:cyan"></i>
+                    <i class='fas fa-arrow-circle-up' style="font-size:24px;color:cyan"></i>
+                    <i class='fas fa-arrow-circle-down' style="font-size:24px;color:cyan"></i>
+                    <i class='fas fa-arrow-circle-right' style="font-size:24px;color:cyan"></i> |</p>
+                <p> | YOU CAN CHANGE OPTION <i class='fas fa-hand-spock' style='font-size:24px;color:yellow'></i>|</p>
             </div>
             <div class="btn-group">
                 <button class="blue blinking" id="btnNew" type="button"><h2> 👽 NEW GAME 👽</h2></button><br>
-                <button class="blue blinking" id="btnCredit" type="button"><h2> 🎥 CREDITS 🎥 </h2></button><br>
+                <button class="blue blinking" id="btnCredit" type="button"><h2> ☢️ OPTIONS ☢️ </h2></button><br>
             </div>
         </div>
     </div>
     </div>
 </body>
 <script src="menu.js"></script>
-<script src="menuEffect.js"></script>
+<script src="menuTitleEffect.js"></script>
 
 </html>

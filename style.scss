@@ -28,7 +28,6 @@
 
 html,
 body {
-    background: radial-gradient(circle at center, #422e38 0, #031424 150%);
     font-family: 'Ubuntu', cursive;
 }
 
@@ -76,8 +75,8 @@ h1 {
 .gradient-border {
     width: 150px;
     height: 150px;
-    padding: 3px;
     border: solid;
+    border: dotted;
     border-bottom-color: rgb(125, 255, 255);
     border-top-color: rgb(125, 255, 255);
     border-left-color: rgb(255, 125, 147);
